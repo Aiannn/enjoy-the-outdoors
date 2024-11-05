@@ -14,7 +14,17 @@ function loadParks(parks) {
     for (column of columns) {
       let td = document.createElement('td')
       if (column === 'Visit') {
-        td.innerText = park[column] || 'N/A'
+        // td.innerText = park[column] || 'N/A'
+        if (park[column]) {
+          let websiteCell = document.createElement('a')
+          websiteCell.href = park[column]
+          websiteCell.innerText = 'Website' 
+          websiteCell.target = '_blank'
+          console.log(park[column])
+          td.append(websiteCell)
+        } else {
+          td.innerText = 'N/A'
+        }
       } else {
         td.innerText = park[column]
       }

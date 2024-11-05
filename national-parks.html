@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>National Parks</title>
   </head>
   <body>
     <header
@@ -74,9 +74,6 @@
       </a>
       <ul class="nav nav-underline">
         <li class="nav-item">
-          <a class="nav-link link-dark active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link link-dark" href="national-parks.html">National Parks Search</a>
         </li>
         <li class="nav-item">
@@ -87,13 +84,29 @@
     <main>
       <section class="container mt-4">
         <h2>National Parks</h2>
-        <form action="">
-          <input type="radio" name="choice" id="radio-by-state" onchange="showSelect()" />
-          <label>By State</label>
-          <input type="radio" name="choice" id="radio-by-type" onchange="showSelect()" />
-          <label>By Type</label>
-        </form>
-        <select name="" id="select" style="display: none" onchange="filterBy()">
+
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="radio-by-state"
+            onchange="showSelect()"
+          />
+          <label class="form-check-label" for="radio-by-state"> By State </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="radio-by-type"
+            onchange="showSelect()"
+          />
+          <label class="form-check-label" for="radio-by-type"> By Type </label>
+        </div>
+
+        <select class="form-select w-25 my-2" id="select" style="display: none" onchange="filterBy()">
           <option value="">Select...</option>
         </select>
         <table class="table table-striped">
