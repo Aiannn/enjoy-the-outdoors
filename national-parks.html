@@ -10,11 +10,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>National Parks</title>
   </head>
   <body>
     <header
-      class="container-fluid px-5 py-2 d-flex justify-content-between align-items-center"
+      class="container-fluid px-5 py-1 d-flex justify-content-between align-items-center"
       style="border-bottom: 1px solid"
     >
       <a href="index.html">
@@ -81,34 +82,34 @@
         </li>
       </ul>
     </header>
-    <main>
+    <main id="national-parks-main">
       <section class="container mt-4">
         <h2>National Parks</h2>
 
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="radio-by-state"
-            onchange="showSelect()"
-          />
-          <label class="form-check-label" for="radio-by-state"> By State </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="radio-by-type"
-            onchange="showSelect()"
-          />
-          <label class="form-check-label" for="radio-by-type"> By Type </label>
+        <div class="my-3">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="radio-by-state"
+              onchange="showSelect()"
+            />
+            <label class="form-check-label" for="radio-by-state"> By State </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="radio-by-type"
+              onchange="showSelect()"
+            />
+            <label class="form-check-label" for="radio-by-type"> By Type </label>
+          </div>
         </div>
 
-        <select class="form-select w-25 my-2" id="select" style="display: none" onchange="filterBy()">
-          <option value="">Select...</option>
-        </select>
+        <select class="form-select w-25 my-2" id="select" style="display: none" onchange="filterBy()"></select>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -123,7 +124,6 @@
               <th>Website</th>
               <th>Latitude</th>
               <th>Longitude</th>
-              <th>Location</th>
             </tr>
           </thead>
           <tbody id="table-body"></tbody>

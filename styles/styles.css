@@ -1,5 +1,6 @@
+/* For Home Page */
 .background {
-    background-image: url('../images/homepageimage.jpg');
+    background-image: url('../images/homepage-image-2.webp');
     background-size: cover;
     background-position: center; 
     height: 100vh;
@@ -9,10 +10,31 @@
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    width: 75vw;
     min-width: 600px;
     text-align: center;
+}
+
+/* For Mountain Page */
+#mountain-main {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+                url('../images/mountain-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+}
+/* For National Parks Page */
+#national-parks-main {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+                url('../images/national-park-bg.webp');
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+    height: 100%;
+    display: flex;
 }
